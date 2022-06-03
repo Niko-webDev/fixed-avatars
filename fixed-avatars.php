@@ -36,7 +36,9 @@ if ( ! class_exists( 'Fixed_Avatars' ) ) {
 
             // Enqueue js ajax file for budypress
             add_action( 'wp_enqueue_scripts', function() {
-                // Bail early if not on buddypress profile page
+                // Bail early if buddypress is not installed
+                if ( ! function_exists( 'is_buddypress' ) ) return;
+                // Enqueue script only on profile page
                 if ( ! bp_is_current_component('profile') ) return;
 
                 wp_enqueue_script( 'fa-avatar.js', plugins_url( 'fa-avatar.js', __FILE__ ), array( 'jquery' ), filemtime( plugin_dir_path( __FILE__ ) . 'fa-avatar.js' ), true );
