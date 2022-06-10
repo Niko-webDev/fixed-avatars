@@ -35,3 +35,15 @@ The file separators are defined by the "FA_IMG_SEPARATOR" constant. Current sepa
 == Image Files Sizes ==
 
 There are no cropping utilities provided yet. You should use a 1:1 ratio.
+
+
+== Changelog ==
+
+1.1 – Jun 10, 2022
+
+* Improve - Change from purely static to instantiated classes
+* Fix - White space in img file names are url encoded
+
+1.0 – Jun 02, 2022
+
+* New - First version
