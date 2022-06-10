@@ -134,18 +134,21 @@ if ( ! class_exists( 'Fixed_Avatars_Admin' ) ) {
 
         public function save_avatar( $user_id ) {
 
-            if ( current_user_can( 'edit_user', $user_id ) ) {
-                $auth_avatars = array_diff( scandir( FA_PRESET_DIR ), ['.', '..'] );
+            if ( ! current_user_can( 'edit_user', $user_id ) ) return;
+            if ( ! isset( $_POST['fa_member_avatar'] ) || empty( $_POST['fa_member_avatar'] ) ) return;
 
-                if ( in_array( $_POST['avatar_preset'], $auth_avatars ) ) {
-                    update_user_meta( $user_id, '_fixed_avatar', sanitize_text_field( $_POST['avatar_preset'] ) );
-                }
+            $auth_avatars = array_diff( scandir( FA_PRESET_DIR ), ['.', '..'] );
 
-                if ( '_use_default' === $_POST['avatar_preset'] ) {
-                    delete_user_meta( $user_id, '_fixed_avatar' );
-                }
+            if ( in_array( $_POST['fa_member_avatar'], $auth_avatars ) ) {
+                update_user_meta( $user_id, '_fixed_avatar', sanitize_text_field( $_POST['fa_member_avatar'] ) );
+            }
+
+            if ( '_use_default' === $_POST['fa_member_avatar'] ) {
+                delete_user_meta( $user_id, '_fixed_avatar' );
             }
         }
+
+        
 
         public function ajax() {
 
