@@ -11,13 +11,13 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 This bare bone plugin disables gravatar.com and allows you to host locally your own default avatar and let users pick their profile picture among a defined set of images.
-It works with Buddypress version 10.2.0, with an ajax function to let members change their avatar from the front-end
+BuddyPress (up to version 10.2.0) and Directorist (up to version 7.2.2) registered members can change change their avatars from the frontend.
 
 
 == Image Files Locations ==
 
-The default avatar must be uploaded to the "base" sub-directory. The first file in alphabetical order will be used as default.
-The avatars to choose from must be uploaded to the "selection" sub-directory.
+The default avatar must be uploaded to the "assets/images/default" sub-directory. The first file in alphabetical order will be used as default.
+The avatars to choose from must be uploaded to the "assets/images/default" sub-directory.
 
 
 == Avatar Names ==
@@ -27,17 +27,17 @@ The file names will be displayed as avatar names. For example,
 The base avatar name will be followed by "(default)".
 
 
-== File Extension and Separator Removal ==
-The file extensions are defined by the "FA_IMG_EXT" constant. Current extensions are: '.png', '.jpg', '.jpeg', '.svg', '.avi', '.webp'.
-The file separators are defined by the "FA_IMG_SEPARATOR" constant. Current separators are '-' and '_'.
-
-
 == Image Files Sizes ==
 
 There are no cropping utilities provided yet. You should use a 1:1 ratio.
 
 
 == Changelog ==
+
+1.2 – Jun 21, 2022
+
+* Add - Directorist integration
+* Fix - All outputs are properly escaped
 
 1.1 – Jun 10, 2022
 
