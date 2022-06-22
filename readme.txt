@@ -10,14 +10,14 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-This bare bone plugin disables gravatar.com and allows you to host locally your own default avatar and let users pick their profile picture among a defined set of images.
-BuddyPress (up to version 10.2.0) and Directorist (up to version 7.2.2) registered members can change change their avatars from the frontend.
+This bare bone plugin disables gravatar.com in WordPress and allows you to host locally your own default avatars and let users pick their profile picture among a defined set of images.
+BuddyPress (up to version 10.2.0) and Directorist (up to version 7.2.2) registered members can change their avatars from the frontend.
 
 
 == Image Files Locations ==
 
 The default avatar must be uploaded to the "assets/images/default" sub-directory. The first file in alphabetical order will be used as default.
-The avatars to choose from must be uploaded to the "assets/images/default" sub-directory.
+The selection of avatars must be uploaded to the "assets/images/default" sub-directory.
 
 
 == Avatar Names ==
@@ -29,7 +29,7 @@ The base avatar name will be followed by "(default)".
 
 == Image Files Sizes ==
 
-There are no cropping utilities provided yet. You should use a 1:1 ratio.
+There are no cropping utilities provided. You should use a 1:1 ratio.
 
 
 == Changelog ==

@@ -60,6 +60,7 @@
 
             if(data == 'success') {
                 msg.text('Your avatar was successfully changed').css('color', 'green');
+                setTimeout( () => document.getElementById('fixed_avatars_image_profile_wrap').scrollIntoView(), 300);
                 location.reload(true);
             }
         })

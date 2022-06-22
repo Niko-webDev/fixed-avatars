@@ -80,6 +80,7 @@ if ( ! class_exists( 'Fixed_Avatars_Admin' ) ) {
 		}
 
 
+
 		/**
 		 * Outputs the instructions modal html in admin footer.
 		 */
@@ -125,6 +126,7 @@ if ( ! class_exists( 'Fixed_Avatars_Admin' ) ) {
 			</style>
 			<?php
 		}
+
 
 
 		/**

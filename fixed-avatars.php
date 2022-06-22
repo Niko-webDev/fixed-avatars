@@ -146,7 +146,7 @@ if ( ! class_exists( 'Fixed_Avatars' ) ) {
 							'before'
 						);
 
-				  	endif;
+					endif;
 				}
 			);
 		}
@@ -308,7 +308,7 @@ if ( ! class_exists( 'Fixed_Avatars' ) ) {
 				}
 
 				$user_avatar = get_user_meta( $user->ID, '_fixed_avatar', true );
-				// return $user_avatar or default if not set
+				// return $user_avatar or default if not set.
 				if ( ! $user_avatar ) {
 					return preg_replace( "/'(https?:)?\/\/.+?'/", $fa_default, $content );
 				} else {
